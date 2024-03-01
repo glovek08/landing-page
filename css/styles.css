@@ -4,6 +4,7 @@
     --main-bg-font1: black;
     --main-bg-font2: rgb(36, 36, 36);
     --main-contrast: #1D2F6F; /*Main context menu bg.*/
+    --main-contrast-font: #dfece8;
     --second-contrast: #023618; /*Secondary context menu bg.*/
 }
 *, *::before, *::after {
@@ -17,4 +18,30 @@ body {
 header {
     background: var(--main-contrast);
     padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+header ul {
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+header ul a {
+    text-decoration: none;
+    font-size: 1.2em;
+    text-align: center;
+    margin: auto;
+    color: var(--main-contrast-font);
+}
+header ul a span {
+    margin: auto 10px;
+}
+.inline-icon { /*Aligns material icon with the text content*/
+    vertical-align: bottom;
+    font-size: 1.2em !important;
+ }
