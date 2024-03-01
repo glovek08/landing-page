@@ -1,0 +1,20 @@
+:root {
+    --main-accent: #85D079; /*Logo, accents, separators, etc.*/
+    --main-bg: #EFF7FF;/*Main site bg.*/
+    --main-bg-font1: black;
+    --main-bg-font2: rgb(36, 36, 36);
+    --main-contrast: #1D2F6F; /*Main context menu bg.*/
+    --second-contrast: #023618; /*Secondary context menu bg.*/
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg);
+}
+header {
+    background: var(--main-contrast);
+    padding: 10px 30px;
+}
