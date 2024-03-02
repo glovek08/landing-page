@@ -10,6 +10,7 @@
     --main-contrast-font: #dfece8;
     --second-contrast: #023618;
     /*Secondary context menu bg.*/
+    --box-bg-transparent: #e7edffda;
 }
 html {
     color-scheme: light;
@@ -23,7 +24,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    width: 100vw;
+    max-width: 100vw;
     background-color: var(--main-bg);
     display: flex;
     align-items: center;
@@ -41,6 +42,9 @@ header {
     width: 100%;
     padding: 5px 10px;
     min-height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 header ul {
@@ -64,7 +68,7 @@ header ul li:hover {
 }
 header ul li a {
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: center;
     margin: auto;
     color: var(--main-contrast-font);
@@ -94,25 +98,28 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100vw;
+    flex-direction: column;
+    width: 100%; /* FLAG 001 (FIX WIDTH) FLEX-BASIS: 100% */
 }
 #hgroup-flex-wrapper {
     margin: 0;
+    padding: 0;
     background: url(/assets/images/richard-t-yovhXPl8V1M-unsplash.jpg);
     background-size: cover;
     background-position: center;
-    min-width: 100vw;
-    min-height: calc(100dvh - 80px);
+    min-height: 100vh;
+    width: 100%; /* FLAG 001 */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 hgroup {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgba(255, 255, 255, 0.736);
+    background-color: var(--box-bg-transparent);
+    box-shadow: 0 0 200px #25272da8;;
     text-align: center;
     padding: 40px 60px;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 #title {
     margin-bottom: 0;
@@ -123,4 +130,35 @@ hgroup {
     margin-top: 5px;
     font-weight: lighter;
 }
+
+section#solution-grid {
+    background: var(--main-bg);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.solution-grid-item {
+    min-width: 400px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h3.solution-title {
+    width: 100%;
+    background: linear-gradient(0deg, transparent 0%, var(--box-bg-transparent) 20%, var(--box-bg-transparent) 80%, transparent 100%);
+    margin: 0;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 2em;
+
+}
+#solution-lighting {
+    background: url(/assets/images/ryan-lange-G-Mt7oxXX3A-unsplash.jpg);
+    background-size: cover;
+}
+
 /*#endregion*/
