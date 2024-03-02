@@ -11,7 +11,9 @@
     --second-contrast: #023618;
     /*Secondary context menu bg.*/
 }
-
+html {
+    color-scheme: light;
+}
 *,
 *::before,
 *::after {
@@ -76,3 +78,6 @@ header ul li a {
 .material-symbols-outlined {
     color: var(--main-contrast-font);
 }
+
+#r
+#endregion
