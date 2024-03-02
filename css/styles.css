@@ -136,7 +136,7 @@ section#solution-grid {
     display: grid;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .solution-grid-item {
@@ -146,6 +146,7 @@ section#solution-grid {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    box-shadow: inset 0 0 300px black;
 }
 h3.solution-title {
     width: 100%;
@@ -160,5 +161,12 @@ h3.solution-title {
     background: url(/assets/images/ryan-lange-G-Mt7oxXX3A-unsplash.jpg);
     background-size: cover;
 }
-
+#solution-temperature {
+    background: url(/assets/images/bigstock-Water-Conditioning-Room-80722916.jpg);
+    background-size: cover;
+}
+#solution-filtration {
+    background: url(/assets/images/Erlab-HALO-Air-Filtration-System.jpg);
+    background-size: cover;
+}
 /*#endregion*/
