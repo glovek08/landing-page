@@ -11,6 +11,14 @@
     --second-contrast: #023618;
     /*Secondary context menu bg.*/
     --box-bg-transparent: #e7edffda;
+
+    /*HAMBURGUER MENU*/
+    --bar-width: 25px;
+    --bar-height: 5px;
+    --hamburger-gap: 3px; 
+    --margin: 15px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburguer-box-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 html {
     color-scheme: light;
@@ -73,6 +81,57 @@ header ul li a {
     margin: auto;
     color: var(--main-contrast-font);
 }
+label.hamburger-menu {
+    --x-width: calc(var(--hamburguer-box-height) * 1.41421356237); /*sqrt of 2*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--margin);
+    right: calc(var(--margin) + 5px);
+    z-index: 10;
+    cursor: pointer;
+}
+label.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+label.hamburger-menu:has(input:checked)::before {
+    transform: rotate(-45deg);
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+label.hamburger-menu:has(input:checked)::after {
+    transform: rotate(45deg);
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+label.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+label.hamburger-menu::before,
+label.hamburger-menu::after,
+label.hamburger-menu input {
+    content: '';
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background: var(--main-bg);
+    border-radius: 2px;
+    transform-origin: right center;
+    transition: opacity var(--animation-timing),
+        width var(--animation-timing),
+        rotate var(--animation-timing),
+        translate var(--animation-timing);
+}
+.sidebar {
+}
 #contact-icon {
     margin-right: 5px;
 }
@@ -132,16 +191,16 @@ hgroup {
 }
 
 section#solution-grid {
-    background: var(--main-bg);
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    background: var(--main-bg);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .solution-grid-item {
-    min-width: 400px;
-    min-height: 400px;
+    min-width: 300px;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,13 +208,12 @@ section#solution-grid {
     box-shadow: inset 0 0 300px black;
 }
 h3.solution-title {
-    width: 100%;
     background: linear-gradient(0deg, transparent 0%, var(--box-bg-transparent) 20%, var(--box-bg-transparent) 80%, transparent 100%);
     margin: 0;
     text-align: center;
     padding: 30px 0;
     font-size: 2em;
-
+    width: 100%;
 }
 #solution-lighting {
     background: url(/assets/images/ryan-lange-G-Mt7oxXX3A-unsplash.jpg);
