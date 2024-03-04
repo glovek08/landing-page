@@ -16,7 +16,7 @@
     --bar-width: 25px;
     --bar-height: 5px;
     --hamburger-gap: 3px; 
-    --margin: 15px;
+    --margin: 10px;
     --animation-timing: 200ms ease-in-out;
     --hamburguer-box-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     --sidebar-bg: #1d2f6fd3;
@@ -55,37 +55,17 @@ header {
     top: 0;
     left: 0;
     z-index: 2;
+    transition: 0.5s;
 }
-
-header ul {
-    margin: 0 10px;
-    padding: 0;
-    gap: 20px;
+header picture {
     display: flex;
     align-items: center;
     justify-content: center;
-    list-style: none;
-    flex-grow: 1;
-    flex-shrink: 0;
-}
-header ul li {
-    padding: 5px;
-    transition: .2s;
-}
-header ul li:hover {
-    transform: scale(1.1);
-    mix-blend-mode:difference;
-}
-header ul li a {
-    text-decoration: none;
-    font-size: 1.2em;
-    text-align: center;
-    margin: auto;
-    color: var(--main-contrast-font);
 }
 label.hamburger-menu {
     --x-width: calc(var(--hamburguer-box-height) * 1.41421356237); /*sqrt of 2*/
     display: flex;
+    padding: 5px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -96,6 +76,11 @@ label.hamburger-menu {
     right: calc(var(--margin) + 5px);
     z-index: 10;
     cursor: pointer;
+}
+label.hamburger-menu:has(input:focus-visible)::before,
+label.hamburger-menu:has(input:focus-visible)::after,
+label.hamburger-menu input:focus-visible {
+    border: 1px solid red;
 }
 label.hamburger-menu input {
     appearance: none;
@@ -134,7 +119,7 @@ label.hamburger-menu input {
 }
 .sidebar {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition: transform var(--animation-timing);
+    transition: transform .5s ease-in-out;
     transform: translateX(100%); /* Use a variable to store the sidebar height */
     position: absolute;
     background-color: var(--sidebar-bg);
@@ -146,15 +131,6 @@ label.hamburger-menu input {
 }
 label.hamburger-menu:has(input:checked) + .sidebar {
     transform: translateX(0);
-}
-#contact-icon {
-    margin-right: 5px;
-}
-#menu-icon {
-    aspect-ratio: 1/1;
-    transform: scale(2);
-    padding: 5px;
-    cursor: pointer;
 }
 .inline-icon {
     /*Aligns material icon with the text content*/
@@ -242,4 +218,12 @@ h3.solution-title {
     background: url(/assets/images/Erlab-HALO-Air-Filtration-System.jpg);
     background-size: cover;
 }
+.transparent {
+    background-color: transparent;
+}
+.contrast {
+    border-radius: 5px;
+    background: var(--main-contrast) !important;
+}
+
 /*#endregion*/
