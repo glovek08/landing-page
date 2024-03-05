@@ -16,7 +16,7 @@
     --bar-width: 25px;
     --bar-height: 5px;
     --hamburger-gap: 3px; 
-    --margin: 10px;
+    --margin: 15px;
     --animation-timing: 200ms ease-in-out;
     --hamburguer-box-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     --sidebar-bg: #1d2f6fd3;
@@ -50,7 +50,7 @@ header {
     justify-content: space-between;
     width: 100%;
     padding: 5px 10px;
-    height: 50px;
+    height: 60px;
     position: fixed;
     top: 0;
     left: 0;
@@ -61,6 +61,9 @@ header picture {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--main-contrast);
+    border-radius: 50px;
+    padding: 5px 15px 5px 5px;
 }
 label.hamburger-menu {
     --x-width: calc(var(--hamburguer-box-height) * 1.41421356237); /*sqrt of 2*/
@@ -128,7 +131,7 @@ label.hamburger-menu input {
     background-color: var(--sidebar-bg);
     padding: 20px;
     color: var(--main-contrast-font);
-    top: 50px;
+    top: 60px;
     right: 0;
     z-index: 1;
 }
@@ -226,3 +229,6 @@ h3.solution-title {
 }
 
 /*#endregion*/
+
+/* TODO: HORIZONTAL SCROLL MENU FOR IMAGES. */
+/* <!-- TODO: CONTINUE MAIN SECTION, ADD PRODUCTS OVERVIEW, PLAN DETAILS, CONTACT INFORMATION, LEGAL STUFF AND FINISH THE FOOTER--> */
