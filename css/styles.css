@@ -214,6 +214,7 @@ hgroup {
 }
 
 section#solution-grid {
+    --solution-nav-arrow: grey;
     padding: 40px;
     max-width: 80%;
     display: grid;
@@ -228,8 +229,41 @@ section#solution-grid {
     outline: 1px solid green;
     margin: 20px;
 }
+section#solution-grid::before {
+    font-family: 'Material Icons';
+    content: "chevron_left";
+    -webkit-font-feature-settings: "liga";
+    color: var(--main-bg);
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--solution-nav-arrow);
+    width: 40px;
+    height: 300px;
+    outline: 1px solid red;
+    position: absolute;
+    left: 25px;
+}
+section#solution-grid::after {
+    font-family: 'Material Icons';
+    content: "chevron_right";
+    -webkit-font-feature-settings: "liga";
+    color: var(--main-bg);
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 300px;
+    outline: 1px solid red;
+    position: absolute;
+    right: 25px;
+    background: var(--solution-nav-arrow);
+}
 
 .solution-grid-item {
+    width: 300px;
     min-height: 300px;
     display: flex;
     align-items: center;
