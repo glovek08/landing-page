@@ -5,12 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Sources.</title>
     <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            max-width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        table {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            border-collapse: separate;
+            border-spacing:2px;
+            margin: 20px;
+        }
+        .table-title {
+            padding: 20px 40px;
+            border-collapse: collapse;
+            border-spacing:0;
+            margin: 0;
+        }
+        .table-title:first-of-type {
+            border-top-left-radius: 10px;
+        }
+        .table-title:last-of-type {
+            border-top-right-radius: 10px;
+        }
         th, td {
             padding: 10px 20px;
+            min-width: 300px;
         }
-        th{
-            background-color: rgb(65, 65, 127);
-            color: rgb(255, 255, 255);
+        table.sources th{
+            background-color: rgb(13, 71, 11);
+            color: white;
+        }
+        table.references th {
+            background-color: rgb(36, 45, 63);
+            color: white;
         }
         td {
             background-color: rgb(202, 202, 202);
@@ -19,9 +51,13 @@
     </style>
 </head>
 <body>
-    <h1>CREDIT TO WHERE ITS DUE.</h1>
+    <h1>CREDIT TO WHERE IT'S DUE.</h1>
     <a href="../index.html">Back to home.</a>
-    <table>
+    <table class="sources">
+        <thead>
+            <th class="table-title">SOURCES</th>
+            <th class="table-title"></th>
+        </thead>
         <tr>
             <th>hgroup bg</th>
             <td>Photo by <a href="https://unsplash.com/@richtea360?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Richard T</a> on <a href="https://unsplash.com/photos/green-plants-on-white-metal-frame-yovhXPl8V1M?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
@@ -39,6 +75,23 @@
         <tr>
             <th>solution-filtration</th>
             <td>Photo taken from <a href="https://www.labrepco.com/product/erlab-halo-laboratory-air-filtration-system-for-wide-array-of-particulates-aerosols-hepa-filtration/">Labrepco</a>. Property of <a href="https://www.erlab.com/en/">Erlab</a></td>
+        </tr>
+        <tr></tr>
+    </table>
+    <table class="references">
+        <thead>
+            <tr>
+                <th class="table-title">REFERENCES</th>
+                <th class="table-title"></th>
+            </tr>
+        </thead>
+        <tr>
+            <th>Hamburger Menu</th>
+            <td><iframe width="400" height="200" src="https://www.youtube.com/embed/dAIVbLrAb_U" title="How To Build An Animated Hamburger Menu With Only CSS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+        </tr>
+        <tr>
+            <th>Horizontal Scroll Menu</th>
+            <td><iframe width="400" height="200" src="https://www.youtube.com/embed/3yfswsnD2sw" title="Create a horizontal media scroller with CSS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
         </tr>
     </table>
 </body>
