@@ -233,6 +233,7 @@ section#solution-grid::before {
     font-family: 'Material Icons';
     content: "chevron_left";
     -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
     color: var(--main-bg);
     font-size: 3em;
     display: flex;
@@ -249,6 +250,7 @@ section#solution-grid::after {
     font-family: 'Material Icons';
     content: "chevron_right";
     -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
     color: var(--main-bg);
     font-size: 3em;
     display: flex;
