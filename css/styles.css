@@ -253,6 +253,7 @@ section#solution-container {
     justify-content: center;
     outline: 1px solid blue;
     max-width: 100%;
+    background-color: var(--main-bg);
 }
 
 div#solution-grid {
@@ -266,26 +267,29 @@ div#solution-grid {
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     scroll-behavior: smooth;
-    background: var(--main-bg);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     outline: 1px solid green;
+    scrollbar-width: none;
 }
 
 .solution-nav {
     font-family: "Material Icons";
     -webkit-font-feature-settings: "liga";
     font-feature-settings:"liga";
-    color: var(--main-bg);
+    color: var(--main-bg-font1);
     font-size: 3em;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--solution-nav-arrow);
     width: 40px;
     height: 300px;
     outline: 1px solid red;
     z-index: 3;
     cursor: pointer;
+    transition: .2s;
+}
+.solution-nav:hover {
+    transform: scale(1.2);
 }
 
 .solution-grid-item {
