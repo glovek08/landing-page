@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -21,14 +21,16 @@
             <img src="assets/images/johnweede_logo_large.png" alt="John Weede Logo" style="height: 40px;" />
         </picture>
         <label class="hamburger-menu" id="hamburger-menu">
-            <input type="checkbox"/>
+            <input type="checkbox" />
         </label>
         <aside class="sidebar">
             <nav>
                 <div><a href="#contact"><span id="contact-icon" class="inline-icon material-symbols-outlined">
-                    phone_in_talk
-                </span>Contact Us!</a></div>
-                <div><hr></div>
+                            phone_in_talk
+                        </span>Contact Us!</a></div>
+                <div>
+                    <hr>
+                </div>
                 <DIV><a href="html/sources.html">Legal</a></DIV>
             </nav>
         </aside>
@@ -41,18 +43,34 @@
                 <h2 id="sub-title">Smoke the Competition</h2>
             </hgroup>
         </div>
-        <section id="solution-grid">
-            <div id="solution-lighting" class="solution-grid-item">
-                <div><h3 class="solution-title">LIGHTING</h3></div>
+        <section id="solution-container">
+            <div id="solution-grid-left-nav" class="solution-nav">
+                    chevron_left
             </div>
-            <div id="solution-temperature" class="solution-grid-item">
-                <div><h3 class="solution-title">TEMPERATURE</h3></div>
+            <div id="solution-grid">
+                <div id="solution-lighting" class="solution-grid-item">
+                    <div>
+                        <h3 class="solution-title">LIGHTING</h3>
+                    </div>
+                </div>
+                <div id="solution-temperature" class="solution-grid-item">
+                    <div>
+                        <h3 class="solution-title">TEMPERATURE</h3>
+                    </div>
+                </div>
+                <div id="solution-filtration" class="solution-grid-item">
+                    <div>
+                        <h3 class="solution-title">FILTRATION</h3>
+                    </div>
+                </div>
+                <div id="solution-nutrition" class="solution-grid-item">
+                    <div>
+                        <h3 class="solution-title">NUTRIENTS</h3>
+                    </div>
+                </div>
             </div>
-            <div id="solution-filtration" class="solution-grid-item">
-                <div><h3 class="solution-title">FILTRATION</h3></div>
-            </div>
-            <div id="solution-nutrition" class="solution-grid-item">
-                <div><h3 class="solution-title">NUTRIENTS</h3></div>
+            <div id="solution-grid-right-nav" class="solution-nav">
+                chevron_right
             </div>
         </section>
     </main>
@@ -60,5 +78,6 @@
 
     </footer>
 </body>
+
 </html>
 <script src="javascript/script.js"></script>
