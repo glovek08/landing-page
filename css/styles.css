@@ -263,7 +263,7 @@ div#solution-grid {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 250px;
-    gap: 20px;
+    gap: 40px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     scroll-behavior: smooth;
@@ -305,21 +305,28 @@ div#solution-grid {
 }
 
 .solution-grid-item:hover {
-    transform: scale(1.1);
     box-shadow: 0px 0px 20px 0 white;
     box-shadow: inset 0 0 0 transparent;
     border-radius: 0px;
 }
-
+.solution-grid-item:hover:not(.active){
+    scale: 1.1;
+}
+.active {
+    outline: 5px solid var(--main-accent);
+    scale: 1.1;
+}
 .solution-grid-item div {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0%;
     transition: .3s ease-in-out;
     cursor: pointer;
+}
+.solution-grid-item:not(.active) div {
+    opacity: 0%;
 }
 
 .solution-grid-item div:hover {
