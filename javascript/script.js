@@ -9,21 +9,30 @@ window.addEventListener('scroll', () => { //Scrolls the header when user scrolls
     }
 });
 document.addEventListener("DOMContentLoaded", () => {
-    let solutionGrid = document.getElementById('solution-grid');
-    solutionGrid.addEventListener('mouseover', (e) => {
-        e.target.addEventListener('mouseover', () => {
-        })
+    const solutionGridElements = document.getElementsByClassName('solution-grid-item');
+    Array.from(solutionGridElements).forEach(element => {
+        element.addEventListener('click', (e) => {
+            // Remove 'active' class from all elements
+            let currentActiveElements = document.querySelectorAll('.solution-grid-item.active');
+            currentActiveElements.forEach(activeElement => {
+                activeElement.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked element
+            e.currentTarget.classList.add('active');
+        });
     });
-    //Scrolls X the solution-grid when user hover over either solution-nav.
-    // let solutionGrid = document.getElementById("solution-grid");
-    // let solutionGridItems = Array.from(document.getElementsByClassName("solution-grid-item"));
-    // let solutionGridRightNav = document.getElementById('solution-grid-right-nav');
-    // let solutionGridLeftNav = document.getElementById('solution-grid-left-nav');
-    // solutionGridLeftNav.addEventListener("mouseover", () => {
-    //     solutionGrid.scrollLeft += -solutionGridItems[0].scrollWidth; //Gets the width of a solution-grid-item;
-    // });
-    // solutionGridRightNav.addEventListener("mouseover", () => {
-    //     solutionGrid.scrollLeft += solutionGridItems[0].scrollWidth;
-    //     console.log(solutionGridItems[0].scrollWidth);
-    // });
 });
+// document.addEventListener("DOMContentLoaded", () => {
+//     const solutionGridElements = document.getElementsByClassName('solution-grid-item');
+//     Array.from(solutionGridElements).forEach(element => {
+//         element.addEventListener('click', (e) => {
+//             let currentActiveElement = Array.from(document.getElementsByClassName('active'));
+//             currentActiveElement.forEach(element => {
+//                 element.classList.remove('active');
+//             })
+//             e.target.classList.add('active');
+//             //We have to fix the h3 element being selected instead of the entire div.
+//         })
+//     })
+// });

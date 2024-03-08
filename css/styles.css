@@ -301,7 +301,6 @@ div#solution-grid {
     flex-direction: column;
     box-shadow: inset 0px 0px 50px black;
     transition: .3s ease-in-out;
-    border-radius: 5px;
 }
 
 .solution-grid-item:hover {
@@ -309,11 +308,9 @@ div#solution-grid {
     box-shadow: inset 0 0 0 transparent;
     border-radius: 0px;
 }
-.solution-grid-item:hover:not(.active){
-    scale: 1.1;
-}
 .active {
     outline: 5px solid var(--main-accent);
+    border-radius: 0px;
     scale: 1.1;
 }
 .solution-grid-item div {
@@ -324,13 +321,6 @@ div#solution-grid {
     align-items: center;
     transition: .3s ease-in-out;
     cursor: pointer;
-}
-.solution-grid-item:not(.active) div {
-    opacity: 0%;
-}
-
-.solution-grid-item div:hover {
-    opacity: 100%;
 }
 
 h3.solution-title {
