@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     Array.from(solutionGridElements).forEach(element => {
         element.addEventListener('click', (e) => {
-            let currentActiveElements = document.querySelectorAll('.solution-grid-item.active');
-            currentActiveElements.forEach(e => {
+            let currentActiveElement = document.querySelectorAll('.solution-grid-item.active');
+            //This is to prevent the h3 solution-title from getting active.
+            currentActiveElement.forEach(e => {
                 e.classList.remove('active');
             });
             e.currentTarget.classList.add('active');
@@ -29,31 +30,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-// document.addEventListener("DOMContentLoaded", () => {
-//     let solutionGridElements = document.getElementsByClassName('solution-grid-item');
-//     let solutionGrid = document.getElementById('solution-grid');
-//     Array.from(solutionGridElements).forEach(element => {
-//         element.addEventListener('click', (e) => {
-//             let currentActiveElements = document.querySelectorAll('.solution-grid-item.active');
-//             currentActiveElements.forEach(activeElement => {
-//                 activeElement.classList.remove('active');
-//             });
-//             e.currentTarget.classList.add('active');
-//         });
-//     });
-// });
-//Now we need to sroll to the element with the active class.
-//
-// document.addEventListener("DOMContentLoaded", () => {
-//     const solutionGridElements = document.getElementsByClassName('solution-grid-item');
-//     Array.from(solutionGridElements).forEach(element => {
-//         element.addEventListener('click', (e) => {
-//             let currentActiveElement = Array.from(document.getElementsByClassName('active'));
-//             currentActiveElement.forEach(element => {
-//                 element.classList.remove('active');
-//             })
-//             e.target.classList.add('active');
-//             //We have to fix the h3 element being selected instead of the entire div.
-//         })
-//     })
-// });
+//TODO: DYNAMICALLY CHANGE THE TEXT CONTENT OF THE SOLUTION-CONTEXT TO THE CURRENTLY ACTIVE SOLUTION-GRID-ITEM.

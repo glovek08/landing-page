@@ -61,7 +61,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 10;
     transition: 0.5s;
 }
 
@@ -253,6 +253,7 @@ section#solution-container {
     justify-content: center;
     outline: 1px solid blue;
     max-width: 100%;
+    max-height: 400px;
     background-color: var(--main-bg);
 }
 
@@ -284,7 +285,7 @@ div#solution-grid {
     width: 40px;
     height: 300px;
     outline: 1px solid red;
-    z-index: 3;
+    z-index: 2;
     cursor: pointer;
     transition: .2s;
 }
@@ -348,6 +349,16 @@ h3.solution-title {
     background-size: cover;
 }
 
+
+section#solution-context {
+    background: var(--main-contrast);
+    min-height: 500px;
+    width: 100%;
+    padding: 50px 15%;
+    color: var(--main-contrast-font);
+    font-size: 1.2em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .transparent {
     background-color: transparent;
 }
