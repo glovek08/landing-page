@@ -30,9 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     });
     solutionGridRightNav.onmouseover = () => {
+        solutionGrid.scrollLeft = solutionGrid.getBoundingClientRect().width;
         console.log('scrollRight');
     }
     solutionGridLeftNav.onmouseover = () => {
+        solutionGrid.scrollLeft = -solutionGrid.getBoundingClientRect().width;
         console.log('scrollLeft');
     }
 });
