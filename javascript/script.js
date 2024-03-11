@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const solutionGrid = document.getElementById('solution-grid');
     const solutionGridRightNav = document.getElementById('solution-grid-right-nav');
     const solutionGridLeftNav = document.getElementById('solution-grid-left-nav');
-    Array.from(solutionGridElements).forEach(element => {
+    Array.from(solutionGridElements).forEach(element => { /*This scrolls the solution-grid's active element into view*/
         element.onclick = (event) => {
             let currentActiveElement = document.querySelectorAll('.solution-grid-item.active');
             //This is to prevent the h3 solution-title from getting active.
@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
             event.currentTarget.classList.add('active');
             let containerRect = solutionGrid.getBoundingClientRect();
             let elementRect = event.currentTarget.getBoundingClientRect();
-            let scrollLeftOnClick= elementRect.left - containerRect.left - (containerRect.width - elementRect.width) / 2;
+            let scrollOnClick= elementRect.left - containerRect.left - (containerRect.width - elementRect.width) / 2;
             solutionGrid.scrollTo({
-                left: scrollLeftOnClick,
+                left: scrollOnClick,
                 behavior: 'smooth'
             });
         };
     });
-    solutionGridRightNav.onmouseover = () => {
+    solutionGridRightNav.onmouseover = () => { /*Handling the nav arrows scrolling on hover*/
         solutionGrid.scrollLeft = solutionGrid.getBoundingClientRect().width;
         console.log('scrollRight');
     }
