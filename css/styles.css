@@ -359,14 +359,33 @@ section#solution-context {
     font-size: 1.2em;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+section#solution-context article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 section#solution-context #solution-context-title {
-    
+    align-self: first baseline;
 }
 section#solution-context #solution-context-text {
     text-align: justify;
 }
 section#solution-context article:not(.activeArticle) {
     display: none;
+}
+a.article-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid var(--main-bg);
+    text-decoration: none;
+    color: var(--main-contrast-font);
+}
+a.article-button span {
+    margin-right: 5px;
+}
+a.article-button:hover {
+    background-color: var(--main-accent);
 }
 .activeArticle {
     display: block;

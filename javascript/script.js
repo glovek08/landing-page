@@ -29,16 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
             solutionGrid.scrollTo({
                 left: scrollOnClick,
                 behavior: 'smooth'
+                //FIX: On smaller viewport, it fucks up.
             });
         };
     });
     solutionGridRightNav.onmouseover = () => { /*Handling the nav arrows scrolling on hover*/
         solutionGrid.scrollLeft = solutionGrid.getBoundingClientRect().width;
-        console.log('scrollRight');
     }
     solutionGridLeftNav.onmouseover = () => {
         solutionGrid.scrollLeft = -solutionGrid.getBoundingClientRect().width;
-        console.log('scrollLeft');
     }
 });
 function changeActiveArticle(itemId) {
@@ -59,7 +58,7 @@ function changeActiveArticle(itemId) {
             break;
         default:
             Array.from(solutionContextArticles).forEach(el => el.classList.remove('activeArticle'));
-            console.warn(`Couldn't find the article with the id: ${itemId}`);
+            console.warn(`Couldn't find the article matching the id: ${itemId}`);
     }
 }
-//TODO: DYNAMICALLY CHANGE THE TEXT CONTENT OF THE SOLUTION-CONTEXT TO THE CURRENTLY ACTIVE SOLUTION-GRID-ITEM.
+//TODO: BUTTONS TO LINK THE ACTIVE ARTICLE TO THE RELEVANT PRODUCT CATALOG.
