@@ -1,4 +1,5 @@
 
+
 window.addEventListener('scroll', () => { //Scrolls the header when user scrolls down.
     const header = document.getElementById('header');
     if (window.scrollY > 5) {
@@ -20,9 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 currentActiveEl.classList.remove('active');
             });
             event.currentTarget.classList.add('active');
+            console.log(`calling the articleActive function with ${event.currentTarget.id}`);
+            changeActiveArticle(event.currentTarget.id);
             let containerRect = solutionGrid.getBoundingClientRect();
             let elementRect = event.currentTarget.getBoundingClientRect();
-            let scrollOnClick= elementRect.left - containerRect.left - (containerRect.width - elementRect.width) / 2;
+            let scrollOnClick = elementRect.left - containerRect.left - (containerRect.width - elementRect.width) / 2;
             solutionGrid.scrollTo({
                 left: scrollOnClick,
                 behavior: 'smooth'
@@ -38,4 +41,25 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log('scrollLeft');
     }
 });
+function changeActiveArticle(itemId) {
+    const solutionContextArticles = document.querySelectorAll('#solution-context article');
+    console.log(Array.from(solutionContextArticles));
+    switch (itemId) {
+        case 'solution-lighting':
+            Array.from(solutionContextArticles).forEach(el => el.id === 'lighting' ? el.classList.add('activeArticle') : el.classList.remove('activeArticle'));
+            console.log(itemId);
+            break;
+        case 'solution-temperature':
+            Array.from(solutionContextArticles).forEach(el => el.id === 'temperature' ? el.classList.add('activeArticle') : el.classList.remove('activeArticle'));
+            console.log('temperature breached');
+            break;
+        case 'solution-filtration':
+            Array.from(solutionContextArticles).forEach(el => el.id === 'filtration' ? el.classList.add('activeArticle') : el.classList.remove('activeArticle'));
+            console.log(itemId);
+            break;
+        default:
+            Array.from(solutionContextArticles).forEach(el => el.classList.remove('activeArticle'));
+            console.warn(`Couldn't find the article with the id: ${itemId}`);
+    }
+}
 //TODO: DYNAMICALLY CHANGE THE TEXT CONTENT OF THE SOLUTION-CONTEXT TO THE CURRENTLY ACTIVE SOLUTION-GRID-ITEM.
