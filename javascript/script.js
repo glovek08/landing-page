@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
             solutionGrid.scrollTo({
                 left: scrollOnClick,
                 behavior: 'smooth'
-                //FIX: On smaller viewport, it fucks up.
+                //FIX: On smaller viewport, it fucks up. Could use a control variable to check if the item is the same that was clicked prior.
             });
         };
     });
@@ -61,4 +61,3 @@ function changeActiveArticle(itemId) {
             console.warn(`Couldn't find the article matching the id: ${itemId}`);
     }
 }
-//TODO: BUTTONS TO LINK THE ACTIVE ARTICLE TO THE RELEVANT PRODUCT CATALOG.
