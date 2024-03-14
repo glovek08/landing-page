@@ -211,7 +211,7 @@ main {
 #hgroup-flex-wrapper {
     margin: 0;
     padding: 0;
-    background: url(/assets/images/richard-t-yovhXPl8V1M-unsplash.jpg);
+    background: url('https://images.unsplash.com/photo-1591754060004-f91c95f5cf05?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -331,17 +331,17 @@ h3.solution-title {
 }
 
 #solution-lighting {
-    background: url(/assets/images/ryan-lange-G-Mt7oxXX3A-unsplash.jpg);
+    background: url('https://images.unsplash.com/photo-1586298307213-fb3bbecaef0e?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
 }
 
 #solution-temperature {
-    background: url(/assets/images/bigstock-Water-Conditioning-Room-80722916.jpg);
+    background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTXtNqmXen6B5h0OgvlG_aqw-dXLsIbtZOC_irln2ZW98Lj0VMUHw3-zumtTTlbpm-4j16lg6smyXR9rjOwL-JZY8NbHR4uJyuaBruJnem-8V2SOafLlpWNi8Iv0mVWwJ9mxpAxYvVaJc/s1600/bigstock-Water-Conditioning-Room-80722916.jpg');
     background-size: cover;
 }
 
 #solution-filtration {
-    background: url(/assets/images/Erlab-HALO-Air-Filtration-System.jpg);
+    background: url('https://www.labrepco.com/wp-content/uploads/2020/07/Erlab-HALO-Air-Filtration-System-600x442.jpg');
     background-size: cover;
 }
 
@@ -509,4 +509,4 @@ a.footer-anchor img:hover {
 }
 
 
-/* <!-- TODO: MEDIA QUERIES AND RESPONSIVE DESIGN--> */
+/* <!-- TODO: MEDIA QUERIES, RESPONSIVE DESIGN, FAVICON--> */
