@@ -1,13 +1,4 @@
 
-
-window.addEventListener('scroll', () => { //Scrolls the header when user scrolls down.
-    const header = document.getElementById('header');
-    if (window.scrollY > 5) {
-        header.classList.add('transparent');
-    } else {
-        header.classList.remove('transparent');
-    }
-});
 document.addEventListener("DOMContentLoaded", () => {
     const solutionGridElements = document.getElementsByClassName('solution-grid-item');
     const solutionGrid = document.getElementById('solution-grid');
@@ -38,6 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     solutionGridLeftNav.onmouseover = () => {
         solutionGrid.scrollLeft = -solutionGrid.getBoundingClientRect().width;
+    }
+});
+window.addEventListener('scroll', () => { //Scrolls the header when user scrolls down.
+    const header = document.getElementById('header');
+    if (window.scrollY > 5) {
+        header.classList.add('transparent');
+    } else {
+        header.classList.remove('transparent');
     }
 });
 function changeActiveArticle(itemId) {
