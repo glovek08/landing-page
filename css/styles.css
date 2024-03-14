@@ -403,8 +403,10 @@ section#contact {
     width: 60%;
     min-height: 200px;
     padding: 40px 30px 30px 30px;
-    background-color: var(--second-contrast);
+    background: rgb(65,137,255);
+    background: linear-gradient(170deg, rgba(65,137,255,1) 19%, rgba(122,61,227,1) 86%); 
     font-size: 1.5em;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.373);
     overflow: auto;
 }
 #contact-ul {
